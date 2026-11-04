@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.about-section {
+    width: 100%;
+    background-color: #edf5ff;
+    padding: 80px 80px 55px;
+    position: relative;
+    border-bottom-left-radius: 50% 45px;
+    border-bottom-right-radius: 50% 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-header .subtitle {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.about-header .title {
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 90px;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+    text-align: left;
+}
+
+.card-icon {
+    flex-shrink: 0;
+    width: 30px;
+    font-size: 23px;
+    line-height: 1;
+    text-align: center;
+}
+
+.card-content {
+    min-width: 0;
+}
+
+.card h3 {
+    font-size: 12px;
+    color: #303030;
+    margin: 0 0 7px;
+    font-weight: 800;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #75879b;
+}
+
+.dot.active {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 1px solid #9ab5d3;
+    position: relative;
+}
+
+.dot.active::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #6e9bc8;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* Tablets and mobile phones */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 18px 40px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .about-header .title {
+        font-size: 19px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        min-height: 75px;
+        padding: 14px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .about-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .about-header .title {
+        font-size: 17px;
+    }
+}

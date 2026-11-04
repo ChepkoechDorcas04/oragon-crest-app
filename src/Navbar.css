@@ -1,0 +1,127 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo-icon{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text{
+    font-size:1.25rem;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: -0.02em;
+}
+.logo-text strong{
+    color:#0284c7 ;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    margin-left: 2px;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #0284c7;
+}
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:#ff5722;
+    border-radius: 2px;
+}
+.nav-actions{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.phone-number:hover {
+  color: #0284c7;
+}
+.cta-button{
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: o.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.cta-button hover{
+    background-color: #ea4813;
+    transform: translateY(-1px);
+}
+.cta-button:active{
+    transform: translateY(0);
+}
+
+@media (max-width:1024px) {
+    .navbar {
+        padding-bottom: 1rem 1.5rem;
+    }
+    .nav-links{
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .nav-links{
+        display: none;
+    }
+    .phone-number{
+        display: none;
+    }
+}

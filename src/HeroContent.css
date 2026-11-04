@@ -1,0 +1,189 @@
+/* Outer Hero Wrapper with Dark Background */
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  background-color: #0b1426; /* Dark navy background */
+  background-image: radial-gradient(circle at 30% 50%, #152544 0%, #0b1426 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #ffffff;
+}
+
+/* Worker Image Overlay on the Left */
+.worker-overlay {
+  position: absolute;
+  left: 2rem;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.worker-img {
+  height: 80vh;
+  max-height: 550px;
+  object-fit: contain;
+}
+
+/* Flex Container Holding Center Content & Right Form */
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-left: auto;
+}
+
+/* 1. Center Text Content Section */
+.hero-center-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.subtitle-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.main-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  color: #ffffff;
+}
+
+.description-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0 0 1.75rem 0;
+}
+
+/* Yellow Primary Button Style */
+.yellow-btn {
+  background-color: #facc15; /* Bright Yellow */
+  color: #0f172a;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.yellow-btn:hover {
+  background-color: #eab308;
+  transform: translateY(-2px);
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  width: 12px;
+  height: 12px;
+}
+
+/* 2. Right Side Contact Card Form */
+.contact-card {
+  width: 380px;
+  background-color: #2583e6; /* Blue Card Background */
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.contact-card h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #e0f2fe;
+  margin: 0 0 1.75rem 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.6rem 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: #e0f2fe;
+  opacity: 0.8;
+}
+
+.form-group select option {
+  background-color: #2583e6;
+  color: #ffffff;
+}
+
+.form-btn {
+  margin-top: 1rem;
+  width: max-content;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .worker-overlay {
+    display: none; /* Hide image on smaller screens */
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
